@@ -16,9 +16,10 @@ import models.Pedidos;
 public class FuncionCarta {
 
 
+    // Muestra la carta
     public void listaCarta() {
 
-        System.out.println("Lista carta");
+        System.out.println("Todos los menús disponibles: ");
         var todo = new ArrayList<Carta>();
 
         EntityManager em = ObjectdbUtil.getEntityManagerFactory().createEntityManager();
@@ -29,17 +30,6 @@ public class FuncionCarta {
         System.out.println("\n\nCONTENIDO DE LA CARTA:");
         todo.forEach((p) -> System.out.println(p));
         
-        
-//        todo.forEach(
-//                (l) -> {
-//                    System.out.println(l);
-//                });
-//        em.close();
-
-//        Query q = s.createQuery("FROM carta", Carta.class);
-//        ArrayList<Carta> res = (ArrayList<Carta>)q.getResultList();
-//        System.out.println("\n\nCONTENIDO DE LA CARTA:");
-//        res.forEach( (p)->System.out.println(p) );
     }
 
 }
